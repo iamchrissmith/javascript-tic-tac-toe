@@ -78,6 +78,14 @@ const clearBoard = (e) => {
   $('.game_space').empty()
 }
 
+const resetGame = (e) => {
+  e.preventDefault()
+
+  clearBoard(e)
+  $('#X_score').text('0')
+  $('#O_score').text('0')
+}
+
 $(document).ready( () => {
   turnIndicator = $('#turnIndicator')
 
@@ -85,4 +93,5 @@ $(document).ready( () => {
 
   $('.game_space').on('click', assignMove)
   $('#new_game').on('click', clearBoard)
+  $('#reset').on('click', resetGame)
 })
