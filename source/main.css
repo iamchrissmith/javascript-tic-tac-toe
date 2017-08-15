@@ -39,7 +39,7 @@ h1, h2 {
   border-bottom:1px solid white;
 }
 
-#players p {
+#players p, #players h3 {
   margin:0;
   padding:0;
 }
