@@ -72,10 +72,17 @@ const assignMove = (e) => {
   }
 }
 
+const clearBoard = (e) => {
+  e.preventDefault()
+
+  $('.game_space').empty()
+}
+
 $(document).ready( () => {
   turnIndicator = $('#turnIndicator')
 
   setTurn()
 
   $('.game_space').on('click', assignMove)
+  $('#new_game').on('click', clearBoard)
 })
